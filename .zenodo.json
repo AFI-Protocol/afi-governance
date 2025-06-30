@@ -1,0 +1,35 @@
+{
+  "title": "AFI Governance Schemas and Validation Harness",
+  "upload_type": "software",
+  "description": "This repository contains the Universal Proposal Schema used in the AFI Protocol's governance pipeline, alongside a complete validation test harness. The schema is designed to standardize on-chain proposal structures for community validation, compatibility, and auditability. Versioned and maintained openly.",
+  "creators": [
+    {
+      "name": "Giovanni Arroyo",
+      "affiliation": "Agentic Financial Intelligence (AFI)"
+    },
+    {
+      "name": "Lawrence Millen",
+      "affiliation": "Agentic Financial Intelligence (AFI)"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "AFI Protocol",
+    "governance",
+    "universal schema",
+    "decentralized finance",
+    "validation",
+    "TypeScript",
+    "open source"
+  ],
+  "version": "v1.0.0",
+  "access_right": "open",
+  "language": "en",
+  "related_identifiers": [
+    {
+      "relation": "isPartOf",
+      "identifier": "https://github.com/AFI-Protocol/afi-governance",
+      "scheme": "url"
+    }
+  ]
+}
