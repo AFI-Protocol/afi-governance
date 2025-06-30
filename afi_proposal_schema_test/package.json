@@ -1,0 +1,13 @@
+{
+  "name": "afi-proposal-schema-test",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "tsx proposal_schema.test.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.3.2",
+    "zod": "^3.22.2"
+  }
+}

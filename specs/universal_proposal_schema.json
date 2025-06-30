@@ -1,0 +1,127 @@
+// ------------------------------
+// 🧠 Universal Proposal Signal Schema (v1.0)
+// ------------------------------
+
+{
+  "signal_type": "governance_proposal",
+  "proposal_id": "string (UUID or hash)",
+  "proposed_by": "string (agent_id or human_address)",
+  "timestamp": "ISO8601",
+  "version_target": "string (e.g., AOS v1.1.0)",
+
+  "title": "string",
+  "description": "string",
+  "justification": "string (why this change is necessary or beneficial)",
+  "affected_modules": ["string"],
+
+  "proposed_mutations": {
+    "field": "string (e.g., agent_roles)",
+    "action": "add | update | remove",
+    "new_value": "any"
+  },
+
+  "dependencies": ["proposal_id"],
+  "proposal_type": "upgrade | policy | emergency | meta",
+  "urgency_level": "low | medium | high | critical",
+
+  "test_vector": "string or URL (optional agent test script)",
+  "compliance_check": true,
+  "signature": "optional cryptographic sig or hash"
+}
+
+// ------------------------------
+// 🤖 Agent Scoring Flow (for Proposal-as-Signal)
+// ------------------------------
+
+1. Intake Proposal-Signal via Universal Governance Schema
+2. Validate structural integrity (field presence, types, signature)
+3. Match against active AOS version (check compatibility)
+4. Run static analysis:
+   - Conflicts with existing values?
+   - Violates immutables?
+   - Breaks dependencies?
+5. Assign novelty score (cosine distance vs past proposals)
+6. Assign impact/risk score (based on affected modules + urgency)
+7. Check linked test_vector (if present) and auto-simulate
+8. Emit scored Proposal Object →
+   {
+     proposal_id,
+     score: {
+       novelty: 0.87,
+       integrity: 1.0,
+       risk: 0.42,
+       alignment: 0.93
+     },
+     recommend: "approve | reject | needs_review"
+   }
+
+9. Forward to DAO Consensus Layer (can be human or agentic)
+
+// ------------------------------
+// 📜 AOS Governance Section (Updated Excerpt)
+// ------------------------------
+
+"Governance within AFI is structured around the submission, scoring, and consensus of Proposal-Signals. All protocol upgrades, parameter mutations, or policy revisions must be submitted in the form of structured intent signals conforming to the Universal Governance Schema.
+
+These signals are evaluated by Governance Agents who apply scoring logic to determine novelty, risk, and alignment with the current AOS version. Final consensus may be reached via human DAO vote or agentic quorum, depending on the system configuration.
+
+Approved proposals are considered part of the permanent Governance Vault and must result in an AOS version bump with an accompanying preamble mutation, encoded and committed on-chain or to the versioned spec repository."
+
+
+// ------------------------------
+// 📘 Agent Registry Schema (v1.0)
+// ------------------------------
+
+{
+  "agent_id": "string (e.g., afi.agent.scoring.0042)",
+  "agent_type": "string (scoring | governance | custodial | oracle | execution)",
+  "registered_by": "string (DAO address or proposer ID)",
+  "aos_version": "string (e.g., 1.0.0)",
+  "permissions": ["score_signals", "submit_proposals", "access_tssd"],
+  "compliance_status": "certified | pending | revoked",
+  "last_selftest": "ISO8601",
+  "metadata": {
+    "description": "string",
+    "language": "string",
+    "model_type": "string",
+    "endpoint": "url",
+    "github_repo": "url"
+  }
+}
+
+// ------------------------------
+// 🚀 FastAPI Registry Server Endpoints
+// ------------------------------
+
+GET /agents
+→ Returns list of registered agents
+
+GET /agents/{agent_id}
+→ Returns full profile and compliance info
+
+POST /register
+→ Registers new agent (requires schema + selftest result)
+
+PATCH /agents/{agent_id}/compliance
+→ Used by DAO to certify or revoke
+
+// ------------------------------
+// 🗳️ Proposal-Signal: Agent Credential Update
+// ------------------------------
+
+{
+  "signal_type": "governance_proposal",
+  "proposal_type": "meta",
+  "title": "Revoke credential for agent scoring.0042",
+  "description": "Agent failed compliance 3 times consecutively.",
+  "proposed_by": "afi.governance.0012",
+  "affected_modules": ["agent_registry"],
+  "proposed_mutations": {
+    "field": "compliance_status",
+    "action": "update",
+    "new_value": "revoked"
+  },
+  "target_agent_id": "afi.agent.scoring.0042",
+  "urgency_level": "high",
+  "signature": "..."
+}
