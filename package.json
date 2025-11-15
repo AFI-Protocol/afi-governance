@@ -1,0 +1,17 @@
+{
+  "name": "afi-governance",
+  "version": "1.0.0",
+  "description": "AFI governance contracts and Epoch Pulse coordination",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Build script TBD'",
+    "test": "echo 'Test script TBD'"
+  },
+  "keywords": ["afi", "governance", "epoch", "pulse", "dao"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AFI-Protocol/afi-governance.git"
+  },
+  "license": "MIT"
+}
+
