@@ -14,5 +14,5 @@ This document outlines the hybrid governance model used by the AFI Protocol.
 
 - **UniversalProposalSignal** — Proposals are standardized and scored like AFI signals.
 - **Proposal Executors** — Validators or agents act as authorized execution endpoints.
-- **Chain-Agnostic Commit Layer** — Using Safe + LayerZero optional broadcast.
+- **Chain-Agnostic Commit Layer** — Using Safe + cross-chain messaging optional broadcast.
 - **Enforced Delays & Challenge Windows** — Reality module integration.
