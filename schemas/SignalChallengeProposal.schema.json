@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://afi.protocol/schemas/SignalChallengeProposal.schema.json",
+  "title": "Signal Challenge Proposal",
+  "description": "Schema for AFI signal challenge proposals submitted to Snapshot governance",
+  "type": "object",
+  "required": [
+    "signalId",
+    "snapshotProposalId",
+    "votingStart",
+    "votingEnd",
+    "spaceId"
+  ],
+  "properties": {
+    "signalId": {
+      "type": "string",
+      "description": "Unique identifier for the signal being challenged"
+    },
+    "snapshotProposalId": {
+      "type": "string",
+      "description": "Snapshot.org proposal ID"
+    },
+    "spaceId": {
+      "type": "string",
+      "description": "Snapshot space ID (e.g., 'afi.eth')"
+    },
+    "challengeReason": {
+      "type": "string",
+      "description": "Optional reason for challenging the signal"
+    },
+    "votingStart": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp when voting starts"
+    },
+    "votingEnd": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp when voting ends"
+    },
+    "snapshotBlock": {
+      "type": "string",
+      "description": "Block number for snapshot voting power"
+    },
+    "proposalType": {
+      "type": "string",
+      "enum": ["single-choice", "approval", "quadratic", "ranked-choice", "weighted", "basic"],
+      "default": "single-choice",
+      "description": "Snapshot proposal voting type"
+    },
+    "choices": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": ["For", "Against", "Abstain"],
+      "description": "Voting choices"
+    },
+    "signalMetadata": {
+      "type": "object",
+      "properties": {
+        "baseScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Original UWR score"
+        },
+        "decayScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Time-decayed UWR score"
+        },
+        "ageHours": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Signal age in hours"
+        },
+        "halfLifeHours": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Half-life used for decay calculation"
+        },
+        "analystId": {
+          "type": "string",
+          "description": "Analyst who created the signal"
+        },
+        "market": {
+          "type": "string",
+          "description": "Market identifier"
+        }
+      },
+      "description": "Metadata about the signal being challenged"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp when proposal was created"
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "Address that created the proposal"
+    }
+  },
+  "additionalProperties": false
+}
