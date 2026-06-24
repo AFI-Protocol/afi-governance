@@ -1,5 +1,7 @@
 # afi-governance — Agent Instructions ⚠️ HIGH RISK
 
+> **AFI Settlement v1 note:** Parts of this document reference the **v0** per-signal mint / ERC-1155 receipt / direct-beneficiary path, which is **superseded as mainnet architecture** by AFI Settlement v1 — rewards settle **by epoch** through a RewardsVault / Merkle-claim layer funded from an EpochSettlementManifest, strategy/epoch receipts use **ERC-6909** (not ERC-1155), provenance is separated from payout, and ENS names are aliases (concrete addresses + chainId are the source of truth). See `afi-docs/specs/AFI_SETTLEMENT_V1_DOCTRINE.md` for the canonical architecture.
+
 **afi-governance** contains on-chain governance contracts and Epoch Pulse coordination logic for AFI Protocol. This repo defines how protocol governance decisions are made and executed on-chain.
 
 **⚠️ WARNING**: This repo contains governance smart contracts. Changes can have systemic impact on protocol governance. All contract modifications require explicit human approval and security audit.

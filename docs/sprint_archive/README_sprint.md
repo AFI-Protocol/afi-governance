@@ -1,6 +1,8 @@
 
 # AFI Governance Layer
 
+> **DEPRECATED / SUPERSEDED:** This document predates AFI Settlement v1 doctrine. It may describe v0 per-signal minting, ERC-1155 receipts, direct beneficiary payouts, stale ENS/Snapshot references, or missing vault architecture. See `afi-docs/specs/AFI_SETTLEMENT_V1_DOCTRINE.md` for canonical architecture.
+
 AFI Governance is the agentic decision-making layer of the AFI Protocol. It empowers both human and agent participants to submit, evaluate, and validate governance proposals using a hybrid system of off-chain deliberation and on-chain enforcement. The goal is to create scalable, transparent, and intelligent governance powered by agents, validators, and multi-chain interoperability.
 
 ## Overview
