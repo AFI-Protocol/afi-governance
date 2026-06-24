@@ -22,7 +22,7 @@
     },
     "spaceId": {
       "type": "string",
-      "description": "Snapshot space ID (e.g., 'afi.eth')"
+      "description": "Snapshot space ID (e.g., 'afidao.eth')"
     },
     "challengeReason": {
       "type": "string",
