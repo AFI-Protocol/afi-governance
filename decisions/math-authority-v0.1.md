@@ -2,14 +2,14 @@
 
 **Status:** Accepted for cleanup planning. **Does not authorize code changes by itself.**
 **Date:** 2026-07-04
-**Basis:** Cross-repo mathematical authority audit (2026-07-04), which directly inspected `afi-econ`, `afi-math`, `afi-core`, `afi-mint`, `afi-token`, `afi-reactor`, and `afi-governance`. Audit recommendation: **Option A — keep `afi-math` as the canonical executable off-chain math kernel package, with sequenced cleanup.** The real problems are not `afi-math`'s existence, but authority drift in `afi-mint`, `afi-token`, `afi-core`, and stale metadata.
+**Basis:** Cross-repo mathematical authority audit (2026-07-04), which directly inspected `afi-econ`, `afi-math`, `afi-core`, `afi-mint`, `afi-token`, `afi-reactor`, and `afi-governance`. Audit recommendation: **Option A — keep `afi-math` as the canonical executable off-chain math kernel package, with sequenced cleanup.** The real problems are not `afi-math`'s existence, but authority drift in `afi-mint`, `afi-token`, `afi-core`, and metadata that is not yet aligned.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` and existing settlement/district doctrine in `afi-docs`. Where this decision conflicts with the Charter, the Charter wins.
 
 ---
 
 ## 1. Purpose
 
-AFI has multiple repositories containing math-like logic, constants, schedules, formulas, reward logic, caps, and placeholders. Today these include (non-exhaustively): the emissions schedule and decay/curve/time-value kernels in `afi-math`; UWR/novelty scoring and decay wrappers in `afi-core`; an inlined emissions schedule copy, mint allocation formula, and eligibility thresholds in `afi-mint`; the on-chain supply cap and unpromoted emissions pseudocode sketches in `afi-token`; placeholder economic models, gauge splits, and simulation formulas in `afi-econ`; indicator/strategy math in `afi-reactor`; and a staking threshold constant plus stub scoring logic in `afi-governance`.
+AFI has multiple repositories containing math-like logic, constants, schedules, formulas, reward logic, caps, and placeholders. Today these include (non-exhaustively): the emissions schedule and decay/curve/time-value kernels in `afi-math`; UWR/novelty scoring and decay wrappers in `afi-core`; an inlined emissions schedule copy, mint allocation formula, and eligibility thresholds in `afi-mint`; the on-chain supply cap and unpromoted emissions pseudocode drafts in `afi-token`; placeholder economic models, gauge splits, and simulation formulas in `afi-econ`; indicator/strategy math in `afi-reactor`; and a staking threshold constant plus stub scoring logic in `afi-governance`.
 
 This decision records **which repo owns which class of mathematical authority**, so future cleanup PRs do not create second sources of truth. It is a boundary record, not an implementation instrument.
 
@@ -28,12 +28,12 @@ Whitepaper doctrine is **not automatically executable canon**: a whitepaper form
 
 ### Disposition of repo-local AFII / AIM / AAG / SES material
 
-AFI Index / AIM / AAG / SES are **published economic doctrine**. The open decision is how to reconcile, promote, quarantine, or rewrite repo-local sketches so they trace to the whitepaper model and pass governance, version-pin, and KAT requirements.
+AFI Index / AIM / AAG / SES are **published economic doctrine**. The open decision is how to reconcile, promote, isolate from executable authority, or rewrite repo-local implementation drafts so they trace to the whitepaper model and pass governance, version-pin, and KAT requirements.
 
 - `afi-econ` appears to contain research/reference implementations of whitepaper §9 concepts.
-- `afi-token` may contain older or rough pseudocode sketches of related doctrine.
-- These sketches are **unpromoted/unpinned implementation sketches of published whitepaper doctrine** — they are not executable authority merely because they live in a repo.
-- Conflicting or obsolete sketches should be quarantined **only** where they conflict with the whitepaper or lack governance activation.
+- `afi-token` may contain prior implementation drafts (pseudocode) of related doctrine.
+- These drafts are **unpromoted/unpinned implementation drafts of published whitepaper doctrine** — they are not executable authority merely because they live in a repo.
+- Implementation drafts are isolated from executable authority (marked non-authoritative) **only** where they diverge from the whitepaper or are not yet activated through governance.
 - Reintroduction or promotion requires governed versioning and test vectors.
 - The cleanup target is **repo drift from doctrine, not the doctrine itself**.
 
@@ -66,7 +66,7 @@ AFI Index / AIM / AAG / SES are **published economic doctrine**. The open decisi
 ### afi-token
 - Owns on-chain enforcement, role/cap checks, and Solidity-level constraints.
 - Because Solidity may need mirrored constants or integer formulas, **every mirrored value must trace to governance and/or canonical `afi-math` test vectors**.
-- Must not treat unpromoted doctrine sketches as active authority.
+- Must not treat unpromoted doctrine drafts as active authority.
 - On-chain math must use integer/base-unit math, not floating point.
 
 ### afi-reactor
@@ -117,9 +117,9 @@ Recorded as of the 2026-07-04 cross-repo audit (all verified by direct inspectio
 - `afi-mint` currently **documents one mint formula and implements another** (goldpaper `clamp(B(t)·Q·N·R·E_epoch)` in docstrings vs implemented proportional epoch-budget allocation; documented `baseMultiplier: 8.0` unused); this requires an **owner decision before behavioral cleanup**.
 - `afi-mint` contains a **float-to-wei quantization hazard** (`BigInt(Math.floor(amount × 10^18))`) that must be removed before any settled/content-addressed mint amounts depend on it.
 - `afi-token` contracts are minimal and integer-based (86B cap in wei, role gating; no schedule on-chain), but **lack traceability to `afi-math`/governance test vectors** — the repo contains zero references to `afi-math`.
-- `afi-token` contains **unpromoted/unpinned implementation sketches of published AFII/AAG doctrine** (dynamic throttle, halving + floor, era transitions, novelty-bonus reward). These sketches are not executable authority; they should be reconciled to the whitepaper model, quarantined only where they conflict with it or lack governance activation, and clearly marked non-authoritative until promoted.
+- `afi-token` contains **unpromoted/unpinned implementation drafts of published AFII/AAG doctrine** (dynamic throttle, halving + floor, era transitions, novelty-bonus reward). These drafts are not executable authority; they should be reconciled to the whitepaper model, isolated from executable authority where they diverge from it or are not yet activated through governance, and clearly marked non-authoritative until promoted.
 - `afi-core` has at least one **local half-life decay implementation** (`GreeksDecayTemplate.applyTimeDecay`) that should delegate to `afi-math` if feasible.
-- `afi-reactor`'s declared `afi-math` dependency metadata (`.afi-codex.json dependsOn`) is **stale**; the reactor currently reaches decay through `afi-core` (`afi-core/decay`), with no direct `afi-math` dependency or import.
+- `afi-reactor`'s declared `afi-math` dependency metadata (`.afi-codex.json dependsOn`) is **not aligned with the current dependency lineage**; the reactor currently reaches decay through `afi-core` (`afi-core/decay`), with no direct `afi-math` dependency or import.
 - `afi-econ` is **research/non-canonical unless formulas are promoted** (self-declared placeholder status; appears to contain research/reference implementations of whitepaper §9 concepts; expects to consume `afi-math`).
 - `afi-governance` contains **placeholder/stub scoring logic** (`validator/proposal_scorer.ts` returns `Math.random()`) that must not be wired as deterministic authority.
 
@@ -128,7 +128,7 @@ Recorded as of the 2026-07-04 cross-repo audit (all verified by direct inspectio
 The following remain **unresolved** and are not decided by this document:
 
 1. **Mint formula / payout model alignment.** The whitepaper separates emissions **sizing** from **allocation/routing**: epoch emissions size is determined by `B(t)` and optional AIM (§9.4); AAG routes the epoch pool across roles (§9.5); and individual payouts are proportional to verified credits inside each role pool (§9.7). The apparent `afi-mint` proportional allocation implementation may align more closely with the whitepaper than the existing docstring. The owner decision should confirm whether `afi-mint` aligns to: (a) the paper model — epoch budget → AAG role routing → pro-rata verified-credit payouts; (b) a direct clamp formula; or (c) a versioned hybrid where quality/novelty/reputation factors feed credits or merit, not independent mint authority.
-2. **AFI Index / AIM / AAG / SES promotion path.** These are published doctrine, but repo-local implementations/sketches (in `afi-econ`, `afi-token`, and elsewhere) are unpromoted until governed, version-pinned, and KAT-tested. The decision is how to reconcile, promote, quarantine, or rewrite each sketch so it traces to the whitepaper model.
+2. **AFI Index / AIM / AAG / SES promotion path.** These are published doctrine, but repo-local implementations/drafts (in `afi-econ`, `afi-token`, and elsewhere) are unpromoted until governed, version-pinned, and KAT-tested. The decision is how to reconcile, promote, isolate from executable authority, or rewrite each implementation draft so it traces to the whitepaper model.
 3. **Quantization helpers.** Whether pure D-7 decimal/integer quantization helpers live in `afi-math` as pure kernels, with mint-specific application at the `afi-mint` seam.
 4. **Token constant governance.** How the 86B cap and other `afi-token` mirrored constants trace to governance and test vectors (decision format, vector location, CI enforcement).
 5. **Staking threshold.** Status and authorization of the **1B staking threshold** (`MIN_SUPPLY_FOR_STAKING`) in `afi-governance` if staking activates, including how it is tested.
@@ -165,14 +165,14 @@ Recorded as **proposed follow-up work, not authorized execution**:
 
 | PR | Scope |
 |---|---|
-| **PR-1** | `afi-math` tests/golden vectors (emissions module) + metadata/version/codex/stale-consumer cleanup |
+| **PR-1** | `afi-math` tests/golden vectors (emissions module) + metadata/version/codex/consumer-reference alignment cleanup |
 | **PR-2** | Owner decision on `afi-mint` formula/payout alignment (paper model epoch budget → AAG → pro-rata credits vs direct clamp formula vs governed hybrid) |
 | **PR-3** | `afi-mint` de-inline of the canonical emissions schedule — import from `afi-math` |
 | **PR-4** | `afi-mint` float-to-wei cleanup, after the formula decision (PR-2) and aligned with the deterministic number policy |
 | **PR-5** | `afi-token` traceability/test-vector cleanup (cap and any mirrored values asserted against `afi-math`/governance vectors) |
-| **PR-6** | Reconciliation of unpromoted `afi-token` doctrine sketches (AFII/AAG and related pseudocode) to the whitepaper model; quarantine only where conflicting or ungoverned |
+| **PR-6** | Reconciliation of unpromoted `afi-token` doctrine implementation drafts (AFII/AAG and related pseudocode) to the whitepaper model; isolate from executable authority only where diverging or not yet governed |
 | **PR-7** | `afi-core` decay delegation to `afi-math` (preserve wrapper semantics; prove numerical equivalence) |
-| **PR-8** | `afi-reactor` stale codex dependency cleanup |
+| **PR-8** | `afi-reactor` codex dependency metadata alignment cleanup |
 | **PR-9** | `afi-econ` README/status clarification (visibility/placeholder wording) |
 | **PR-10** | `afi-governance` placeholder scorer/stub hygiene |
 
