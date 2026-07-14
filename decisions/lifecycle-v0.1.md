@@ -102,16 +102,16 @@ The **Certifier** and **Qualifier** are **separate** authorities (today conflate
 
 ---
 
-## 7. D-LIFE-6 — the handoff required before persistence
+## 7. D-LIFE-6 — the handoff required before canonical scored-signal evidence persistence
 
-**Decision.** A signal MUST NOT be persisted to any store until the **pre-persistence handoff** is complete:
+**Decision.** A signal MUST NOT be persisted into the **canonical scored-signal evidence store** until the **pre-persistence handoff** is complete:
 1. **Schema validation passed** (`VALIDATED`, USS v1.1); and
 2. **Scoring produced the canonical artifacts** — the `afi.scored-signal.v1` projection (the canonical representation **selected by the merged OBJ-GOV D-OBJ-5**) **and** its `ProvenanceRecord`, i.e. a **canonicalized, self-identifying** object, not raw runtime baggage (`rawUss`/`lenses`/volatile timestamps) and not an un-canonicalized heavy document; and
 3. **Identifier continuity is established** (D-LIFE-5: governed `signalId` + triple + score identity).
 
-Persistence receives the **canonical, self-identifying, certifiable** object; the current live path — which persists a `@ts-nocheck` heavy non-canonical document and **swallows persistence failure** (`afi-reactor/src/services/froggyDemoService.ts:1,330` discards the write status; `server.ts:237` returns 200; LIFE-06, LIFE-03) — is **non-conforming reality** to be corrected under a separate implementation authorization.
+The canonical scored-signal evidence store receives the **canonical, self-identifying, certifiable** object; the current live path — which persists a `@ts-nocheck` heavy non-canonical document and **swallows persistence failure** (`afi-reactor/src/services/froggyDemoService.ts:1,330` discards the write status; `server.ts:237` returns 200; LIFE-06, LIFE-03) — is **non-conforming reality** to be corrected under a separate implementation authorization.
 
-**Scope-guard (critical).** This defines the **precondition for** persistence — the object shape and identity that any store must receive — **only**. It does **not** decide **which** store persists it, the write/dedup/index mechanism, the two-store reconciliation (**F-PERSIST-01**, a blocker-severity finding), or store immutability/finality — **all of that is MONGO-GOV** (§8). LIFE-GOV defines *what must be true before* persistence; MONGO-GOV decides *where and how* it persists.
+**Scope-guard (critical).** This defines the **precondition for entry into the canonical scored-signal evidence store** — the object shape and identity that store must receive — **only**. It governs **only** that evidence store; it does **not** govern or forbid operational storage of **raw ingestion, intermediate/DAG state, retry/dead-letter data, or replay inputs** (all **MONGO-GOV**). It does **not** decide **which** concrete store holds the canonical scored signal, the write/dedup/index mechanism, the two-store reconciliation (**F-PERSIST-01**, a blocker-severity finding), or store immutability/finality — **all of that is MONGO-GOV** (§8). LIFE-GOV defines *what must be true before* canonical scored-signal evidence persistence; MONGO-GOV decides *where and how* it persists.
 
 ---
 
