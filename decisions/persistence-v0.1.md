@@ -61,9 +61,9 @@ Verified against current `origin/main`. Two divergent Mongo stores each carry "c
 
 ## 4. D-MONGO-3 — the Gateway/Reactor write-ownership boundary
 
-**Decision.** Both **afi-reactor** (single-tenant ingest spine) and **afi-gateway** (multi-tenant ingest) are **writers** into the *one* canonical evidence store, and both MUST write **the same canonical record shape** (D-MONGO-1) **through the afi-infra-owned store contract** (D-MONGO-2). Neither may own or write a **parallel, isolated, differently-shaped canonical store** (ending today's split: reactor→heavy `reactor_scored_signals_v1`; gateway→time-series `tssd_signals`). Tenant-scoping is a **feature of the one store** (the existing `TenantScopedTSSDVaultClient` pattern), not a second canonical store. The **gateway's operational `afi_eliza` store** (chat/session/health) is **not** an evidence writer and is untouched (§5).
+**Decision.** There is a **single authoritative canonical write path.** **`afi-infra` owns and implements the sole canonical evidence persistence *interface* and the sole storage *mutation path*** for the canonical evidence store (D-MONGO-1/D-MONGO-2). **`afi-reactor`** (single-tenant ingest spine) and **`afi-gateway`** (multi-tenant ingest) **may submit complete governed evidence records *through* that interface** — they are **submitters, not writers**; **neither owns an independent canonical database writer or a parallel canonical store** (ending today's split: reactor→heavy `reactor_scored_signals_v1`; gateway→time-series `tssd_signals`). A canonical write is admitted **only** when the submitted record carries the governed **`afi.scored-signal.v1` projection**, its **provenance linkage**, and **`signalId` continuity** (OBJ-GOV D-OBJ-1/D-OBJ-5), and satisfies the applicable **LIFE-GOV preconditions** (the `decisions/lifecycle-v0.1.md` D-LIFE-6 pre-persistence handoff). **Gateway raw/unscored ingestion MAY use operational storage (§5) but MUST NOT enter the canonical evidence store.** Tenant-scoping is a **feature of the one interface/store**, not a second canonical store; the gateway's operational `afi_eliza` store is **not** an evidence writer and is untouched (§5).
 
-**Scope-guard.** Fixes **who may write the canonical evidence record and through what contract** only; it does **not** decide request/API surfaces or gateway auth (ATLAS-GOV), nor any gateway operational-store hygiene.
+**Scope-guard.** Fixes **the single canonical write owner (afi-infra), the submit-through-the-interface rule, and the admission preconditions** only. The "persistence interface" here is the **internal storage-mutation contract** owned by afi-infra — **not** an external/HTTP API surface (ATLAS-GOV); this decision does **not** define its signature or the storage engine, request/API surfaces or gateway auth (ATLAS-GOV), nor any gateway operational-store hygiene.
 
 ---
 
@@ -91,18 +91,15 @@ Verified against current `origin/main`. Two divergent Mongo stores each carry "c
 
 ---
 
-## 8. D-MONGO-7 — treatment/migration of the two existing stores (⚠ owner choice)
+## 8. D-MONGO-7 — treatment/migration of the two existing stores
 
-**Decision.** Neither existing store is canonical as-is. Both are recorded as **tier-4 reality** to be reconciled to the canonical store (D-MONGO-1): afi-reactor's `reactor_scored_signals_v1` (heavy, non-idempotent) and afi-infra's `tssd_signals` (time-series, no unique index) are **non-conforming**. The concrete reconciliation is an owner choice, surfaced — **not** silently decided:
+**Decision.** **Neither existing store is canonical; both are demoted from canonical status** and recorded as **tier-4 reality**: afi-reactor's `reactor_scored_signals_v1` (heavy, non-idempotent) and afi-infra's `tssd_signals` (time-series, no unique index) are **non-conforming** and are **not** the canonical evidence store.
 
-**⚠ OWNER-CHOICE `O-CHOICE-STORE`.**
-- **(A) — DEFAULT (recommended):** Stand up the canonical evidence store as a **new, standard (non-time-series), unique-`signalId`-indexed** collection under the afi-config contract + afi-infra implementation; **migrate** conforming historical records from both existing stores into it; then **demote** `reactor_scored_signals_v1` (retire) and **repurpose** `tssd_signals` as an **operational time-series telemetry** store (§5) — never as canonical evidence. *(Cleanest: satisfies §6/§7 and aligns with OBJ-GOV shapes.)*
-- **(B):** **Promote afi-infra `tssd_signals` to canonical** by **converting it from a time-series to a standard collection** (to gain the unique `signalId` index) and reshaping to the canonical record; retire the reactor collection.
-- **(C):** **Promote afi-reactor `reactor_scored_signals_v1` to canonical** by reshaping it to the canonical record + adding the unique index; retire the afi-infra store as canonical.
+**Operative resolution — Option A (the former `O-CHOICE-STORE`, now selected).** The canonical scored-signal evidence store is established as a **fresh, unique-`signalId`-indexed store implementing `afi.scored-signal-evidence.v1`** (satisfying D-MONGO-1 / §6 / §7 — hence not a time-series form). **Eligible existing records are reconciled/migrated** into it under a **separately authorized implementation plan**. On cutover, `reactor_scored_signals_v1` is **retired** and `tssd_signals` may be **repurposed as operational time-series telemetry** (§5) — **never** as canonical evidence. The previously-surfaced alternatives — promoting either existing store in place — are **considered and NOT adopted**, and are **not operative**.
 
-This decision proposes **(A)**; it makes none of (A)/(B)/(C) a fait accompli. Whichever is chosen, the canonical store MUST satisfy §2/§6/§7, and the migration itself is a **separately authorized** implementation act (§12).
+This selects exactly **one** canonical store, resolving the F-PERSIST-01 blocker. The reconciliation/migration is a **separately authorized** implementation act (§12); no migration mechanics, collection names, or topology are decided here.
 
-**Scope-guard.** Decides the **status (non-canonical) + reconciliation options** only; the migration code/DDL is not authorized here.
+**Scope-guard.** Decides the **demotion of both stores and the Option-A resolution** only; migration code/DDL, concrete collection names, and deployment topology are **not** authorized or defined here.
 
 ---
 
@@ -137,7 +134,7 @@ It amends no prior decision, the Charter, or the Addendum; it creates **no** imp
 
 ## 12. What still requires a new authorization
 
-Any code change conforming to §§2–10 is a **separately authorized** implementation act (owner decision or owner-recorded PR authorization), not licensed here — in particular: authoring the `afi.scored-signal-evidence.v1` afi-config schema; standing up / migrating the canonical store per the chosen `O-CHOICE-STORE` option; creating the unique `signalId` index and idempotent write path; converging the reactor + gateway writers onto the one contract; enforcing the pre-persistence handoff and first-class persistence-failure handling (retiring the `@ts-nocheck`/swallow path); and un-jest-ignoring the persistence tests (F-PERSIST-07). Each such slot must also respect the out-of-scope boundaries in §11.
+Any code change conforming to §§2–10 is a **separately authorized** implementation act (owner decision or owner-recorded PR authorization), not licensed here — in particular: authoring the `afi.scored-signal-evidence.v1` afi-config schema; standing up the fresh canonical store and migrating eligible records per the **Option-A** resolution (§8); creating the unique `signalId` index and idempotent write path; converging reactor + gateway to **submit through the single afi-infra canonical persistence interface** (§4); enforcing the pre-persistence handoff and first-class persistence-failure handling (retiring the `@ts-nocheck`/swallow path); and un-jest-ignoring the persistence tests (F-PERSIST-07). Each such slot must also respect the out-of-scope boundaries in §11.
 
 ---
 
