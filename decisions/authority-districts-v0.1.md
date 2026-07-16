@@ -97,7 +97,7 @@ Districts are **"Droid factory districts"** as defined by `AFI_DROID_PIPEHEAD_AD
 | Implementation repo | `afi-reactor` (`src/pipeheads/`) | `afi-config` (schemas, M1); `afi-reactor` (`src/pipeheads/provenance/`, D2-native surface) |
 | Implementation status | IMPLEMENTED (non-production POC) | **M1** authorized + implemented (afi-config schema drafts + tests); **"M2" runtime surface shipped in `afi-reactor`** |
 | Production status | Non-production / demo-only | Non-production |
-| Governed scope | The five-lane evaluation DAG POC; deterministic scoring/validation/audit; Droids may not become the source of financial truth (Addendum §14) | **M1 only** — afi-config schema drafts + tests, **"No runtime wiring"** (D-17 §3); the M0 report is a *planning baseline*, **"a planning artifact, not an implementation authorization"** (`district-2-m0-canonical-data-boundary-and-hash-doctrine.md:589`) |
+| Governed scope | The five-lane evaluation DAG POC; deterministic scoring/validation/audit; Droids may not become the source of financial truth (Addendum §14) | **M1 only** — afi-config schema drafts + tests, **"No runtime wiring"** (D-17 §3); the M0 report is a *planning baseline*, **"a planning artifact, not an implementation authorization"** (`afi-docs` @ `1f3f959`, `reports/district-2-m0-canonical-data-boundary-and-hash-doctrine.md:589`) |
 | Explicitly deferred scope | Any production promotion; any financial-truth authority | **M2–M6** (D-17 §2: "does not authorize M2–M6 or any other District work"); canonical-hash unification; any settlement/reward/mint/anchor attachment |
 
 ### D.1 District 2 "M2" authorization-gap treatment (Part-D core)
