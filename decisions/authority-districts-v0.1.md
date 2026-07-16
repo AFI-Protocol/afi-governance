@@ -5,7 +5,7 @@
 **Date:** 2026-07-14
 **Type:** Foundational protocol-development governance decision (authority topology + canonical District registry). Docs/governance-ledger only.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` (canonical home `afi-config/codex/governance/droids/`) and its `AFI_DROID_PIPEHEAD_ADDENDUM.v0.1.md`. Where this decision conflicts with the Charter, the Charter wins.
-**Evidence basis:** the read-only Districts / API Atlas reconciliation audit preserved at `afi-docs/specs/audit/districts-api-atlas/` (96 findings; non-authoritative evidence record). This decision evaluates that evidence and the primary governance sources directly; the audit is input, not authority.
+**Evidence basis:** the read-only Districts / API Atlas reconciliation audit, preserved at the immutable pin `afi-docs` @ `1f3f959` (PR #10), `specs/audit/districts-api-atlas/` (96 findings; non-authoritative evidence record). This decision evaluates that evidence and the primary governance sources directly; the audit is input, not authority.
 
 ---
 
