@@ -5,7 +5,7 @@
 **Date:** 2026-07-14
 **Type:** Foundational protocol-development governance decision (authority topology + canonical District registry). Docs/governance-ledger only.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` (canonical home `afi-config/codex/governance/droids/`) and its `AFI_DROID_PIPEHEAD_ADDENDUM.v0.1.md`. Where this decision conflicts with the Charter, the Charter wins.
-**Evidence basis:** the read-only Districts / API Atlas reconciliation audit preserved at `afi-docs/specs/audit/districts-api-atlas/` (96 findings; non-authoritative evidence record). This decision evaluates that evidence and the primary governance sources directly; the audit is input, not authority.
+**Evidence basis:** the read-only Districts / API Atlas reconciliation audit, preserved at the immutable pin `afi-docs` @ `1f3f959` (PR #10), `specs/audit/districts-api-atlas/` (96 findings; non-authoritative evidence record). This decision evaluates that evidence and the primary governance sources directly; the audit is input, not authority.
 
 ---
 
@@ -97,7 +97,7 @@ Districts are **"Droid factory districts"** as defined by `AFI_DROID_PIPEHEAD_AD
 | Implementation repo | `afi-reactor` (`src/pipeheads/`) | `afi-config` (schemas, M1); `afi-reactor` (`src/pipeheads/provenance/`, D2-native surface) |
 | Implementation status | IMPLEMENTED (non-production POC) | **M1** authorized + implemented (afi-config schema drafts + tests); **"M2" runtime surface shipped in `afi-reactor`** |
 | Production status | Non-production / demo-only | Non-production |
-| Governed scope | The five-lane evaluation DAG POC; deterministic scoring/validation/audit; Droids may not become the source of financial truth (Addendum §14) | **M1 only** — afi-config schema drafts + tests, **"No runtime wiring"** (D-17 §3); the M0 report is a *planning baseline*, **"a planning artifact, not an implementation authorization"** (`district-2-m0-canonical-data-boundary-and-hash-doctrine.md:589`) |
+| Governed scope | The five-lane evaluation DAG POC; deterministic scoring/validation/audit; Droids may not become the source of financial truth (Addendum §14) | **M1 only** — afi-config schema drafts + tests, **"No runtime wiring"** (D-17 §3); the M0 report is a *planning baseline*, **"a planning artifact, not an implementation authorization"** (`afi-docs` @ `1f3f959`, `reports/district-2-m0-canonical-data-boundary-and-hash-doctrine.md:589`) |
 | Explicitly deferred scope | Any production promotion; any financial-truth authority | **M2–M6** (D-17 §2: "does not authorize M2–M6 or any other District work"); canonical-hash unification; any settlement/reward/mint/anchor attachment |
 
 ### D.1 District 2 "M2" authorization-gap treatment (Part-D core)

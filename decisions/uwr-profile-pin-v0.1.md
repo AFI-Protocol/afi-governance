@@ -16,7 +16,7 @@
 - "The protocol standardizes the engine, profile structure, version pins, KATs, and replayability."
 - "profiles only become protocol-recognized if registered and pinned."
 
-No registered profile exists today. The live scorer runs the placeholder configuration `defaultUwrConfig` (`id: "uwr-default-stub"`, `afi-core/validators/UniversalWeightingRule.ts`), which carries an in-code TODO to source governance-approved weights from `afi-config`. Persisted scored records pin no scorer or configuration version, and `afi-docs/specs/AFI_REPLAY_READINESS_MATRIX.md` records that no lifecycle stage is deterministically replayable today, citing the unpinned `uwr-default-stub` placeholder among the causes.
+No registered profile exists today. The live scorer runs the placeholder configuration `defaultUwrConfig` (`id: "uwr-default-stub"`, `afi-core/validators/UniversalWeightingRule.ts`), which carries an in-code TODO to source governance-approved weights from `afi-config`. Persisted scored records pin no scorer or configuration version, and the AFI replay-readiness matrix at the immutable pin `afi-docs` @ `c666224` (`specs/AFI_REPLAY_READINESS_MATRIX.md`; afi-docs HEAD on this decision's acceptance date) records that no lifecycle stage is deterministically replayable today, citing the unpinned `uwr-default-stub` placeholder among the causes.
 
 This decision registers the **first version-pinned UWR profile** so that testnet signal scoring runs against a named, pinned, KAT-gated profile instead of an anonymous stub — without changing a single scored value.
 
