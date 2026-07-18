@@ -1,7 +1,7 @@
 # AFI Protocol-Development Authority Topology & Canonical District Registry v0.1
 
 **Slot:** `AFI-GOV-AUTHORITY-DISTRICTS-v0.1`
-**Status:** **Proposed** for owner approval. **This decision authorizes no implementation and no code, schema, package, contract, persistence, scoring, or economic change.** It becomes authoritative **only** when the owner merges it. Until merged, it is a draft with no force.
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #14 on 2026-07-14 (merge commit `1b15fd2`, merged unedited; acceptance recorded under DSC-GOV D-DSC-8). **This decision authorizes no implementation and no code, schema, package, contract, persistence, scoring, or economic change.** It became authoritative on that owner merge.
 **Date:** 2026-07-14
 **Type:** Foundational protocol-development governance decision (authority topology + canonical District registry). Docs/governance-ledger only.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` (canonical home `afi-config/codex/governance/droids/`) and its `AFI_DROID_PIPEHEAD_ADDENDUM.v0.1.md`. Where this decision conflicts with the Charter, the Charter wins.
@@ -176,4 +176,4 @@ It creates **no** implementation slot and authorizes **no** repository code, sch
 
 ---
 
-**Proposed for owner approval. Authoritative only upon owner merge. No implementation is authorized by this decision.**
+**Accepted owner decision (afi-governance PR #14, merge commit `1b15fd2`). Authoritative upon owner merge. No implementation is authorized by this decision.**

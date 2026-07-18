@@ -1,7 +1,7 @@
 # AFI District 2 — Prospective Bounded Ratification of the Shipped "M2" D2-Native Artifact Surface v0.1
 
 **Slot:** `AFI-GOV-DISTRICT-2-M2-RATIFY-v0.1`
-**Status:** **Proposed** for owner approval. **This decision authorizes no new implementation and no code, schema, package, contract, persistence, API, scoring, or economic change.** It ratifies — *prospectively and within an exactly enumerated, commit-pinned, non-production scope* — a surface that **already exists**; it writes no bytes in any implementation repository. It becomes authoritative **only** when the owner merges it. Until merged, it is a draft with no force.
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #15 on 2026-07-14 (merge commit `65997fb`, merged unedited; acceptance recorded under DSC-GOV D-DSC-8). **This decision authorizes no new implementation and no code, schema, package, contract, persistence, API, scoring, or economic change.** It ratifies — *prospectively and within an exactly enumerated, commit-pinned, non-production scope* — a surface that **already exists**; it writes no bytes in any implementation repository. It became authoritative on that owner merge.
 **Date:** 2026-07-14
 **Type:** Scoped District-2 ratification decision (protocol-development governance). Docs/governance-ledger only. **Resolves the open owner choice `D-CHOICE-1`** recorded in `decisions/authority-districts-v0.1.md` §D.1.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` (canonical home `afi-config/codex/governance/droids/`), its `AFI_DROID_PIPEHEAD_ADDENDUM.v0.1.md`, and `decisions/authority-districts-v0.1.md`. Where this decision conflicts with the Charter, the Charter wins.
@@ -170,4 +170,4 @@ Any of the following remains **unauthorized** until its own scoped owner decisio
 
 ---
 
-**Proposed for owner approval. Authoritative only upon owner merge. This decision ratifies an existing non-production surface within an exactly enumerated, commit-pinned scope; it authorizes no new implementation, and it does not retroactively authorize the historical gap it preserves.**
+**Accepted owner decision (afi-governance PR #15, merge commit `65997fb`). Authoritative upon owner merge. This decision ratifies an existing non-production surface within an exactly enumerated, commit-pinned scope; it authorizes no new implementation, and it does not retroactively authorize the historical gap it preserves.**
