@@ -19,7 +19,7 @@
 3. **D-FLPR-3** — One bounded additive amendment to `afi.enrichment.pattern.v1` (the `candlestick` block).
 4. **D-FLPR-4** — The explicit-selection law (`providerInstanceRef` mandatory per enabled lane; fail-closed resolution; no fallback; no env-var vendor selection).
 5. **D-FLPR-5** — The invariance obligations (byte-equal scored values for the reference profile; Evidence V2 frozen; composition-hash movement is the governed D-PBF-10 consequence).
-6. **D-FLPR-6** — The forward-only removal mandate (classic direct paths deleted on proof of equivalence; no shims, dual-runs, or archives).
+6. **D-FLPR-6** — The forward-only removal mandate (classic direct paths deleted on proof of equivalence; superseded governed registry records removed and the froggy 1.0.0 composition pin re-recorded; no shims, dual-runs, or archives).
 7. **D-FLPR-7** — The committed all-five keyless/self-hosted reference profile and the BYOK credential posture.
 8. **D-FLPR-8** — Non-goals and reservations (no Evidence V3, no Atlas, no analyst change, no ensembles, no marketplace, nothing deployed; tiny-brains remains a non-authority service).
 
@@ -56,7 +56,7 @@ The following adapters are authorized as trusted, compiled-with-runtime, statica
 5. **Pattern, first-party service:** the existing Tiny Brains pattern adapter re-identified honestly as `afi-adapter-pattern-tiny-brains` (it invokes the remote-topology self-hosted pattern service; "local" naming is retired with no governed-record blast radius since no pattern provider record existed).
 6. **News, keyless reference:** `afi-adapter-news-sec-edgar` — SEC EDGAR (keyless US-government source; the required descriptive `User-Agent` is a non-secret identifier, not a credential).
 
-The incumbent `afi-adapter-technical-local` and `afi-adapter-news-http` (NewsData BYOK) remain as-is. **Scope-guards:** no arbitrary operator code, no operator-supplied endpoints beyond adapter policy (`invocation.endpointProfile` stays `"default"`-only), registry presence is not endorsement (D-PBF-6), derived-values-only posture for external sources, and adapters may not fabricate enrichment on failure — a failed lane degrades or aborts per declared manifest policy, recorded, never silently substituted.
+The incumbent `afi-adapter-technical-local` and `afi-adapter-news-http` (NewsData BYOK) remain as-is. The same administrative D-FCP-5 registration authority covers the **successor composition artifacts** the activation requires: the five-lane pipeline manifest (`froggy-trend-pullback v1.1.0`, every lane node carrying its `providerInstanceRef`), the vendor-neutral lane-plugin manifests (`afi-analysis-{technical,pattern,sentiment,news,aiml} 2.0.0`), and the five-category merge manifest (`afi-merge-enriched-view 1.1.0`). **Scope-guards:** no arbitrary operator code, no operator-supplied endpoints beyond adapter policy (`invocation.endpointProfile` stays `"default"`-only), registry presence is not endorsement (D-PBF-6), derived-values-only posture for external sources, and adapters may not fabricate enrichment on failure — a failed lane degrades or aborts per declared manifest policy, recorded, never silently substituted.
 
 ## 4. D-FLPR-3 — Bounded additive amendment: `afi.enrichment.pattern.v1` `candlestick` block
 
