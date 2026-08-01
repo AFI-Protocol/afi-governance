@@ -1,7 +1,7 @@
 # AFI Canonical Object Identity & Identifier Continuity v0.1 (OBJ-GOV)
 
 **Slot:** `AFI-GOV-OBJ-IDENTITY-v0.1` (OBJ-GOV)
-**Status:** **Proposed** for owner approval. **This decision authorizes no implementation and no code, schema, package, contract, persistence, API, scoring, or economic change.** It designates canonical object *identities* and *identifier-continuity* rules as protocol-development law; it makes every conforming code change a **separately authorized** implementation act. It becomes authoritative **only** when the owner merges it. Until merged, it is a draft with no force.
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #16 on 2026-07-14 (merge commit `4f490a5`); acceptance recorded under ARN-GOV D-ARN-1. **This decision authorizes no implementation and no code, schema, package, contract, persistence, API, scoring, or economic change.** It designates canonical object *identities* and *identifier-continuity* rules as protocol-development law; it makes every conforming code change a **separately authorized** implementation act. It became authoritative on that owner merge.
 **Date:** 2026-07-14
 **Type:** Scoped protocol-development governance decision (canonical object identity + identifier continuity). Docs/governance-ledger only.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` (canonical home `afi-config/codex/governance/droids/`), its `AFI_DROID_PIPEHEAD_ADDENDUM.v0.1.md`, and `decisions/authority-districts-v0.1.md`. Coordinates with (does **not** override) `decisions/uwr-profile-pin-v0.1.md`, `decisions/uwr-runtime-consumption-v0.1.md`, and `decisions/math-authority-v0.1.md`. Where this decision conflicts with the Charter, the Charter wins.
@@ -131,4 +131,4 @@ Any code change conforming to §§2–7 is a **separately authorized** implement
 
 ---
 
-**Proposed for owner approval. Authoritative only upon owner merge. This decision designates canonical object identities and identifier-continuity rules as protocol-development law; it authorizes no implementation, decides no lifecycle/persistence/API/economic/scoring-law question, and blesses no shipped code — conforming changes remain separately authorized.**
+**Accepted owner decision — accepted by merge of afi-governance PR #16 on 2026-07-14 (merge commit `4f490a5`); acceptance recorded under ARN-GOV D-ARN-1. This decision designates canonical object identities and identifier-continuity rules as protocol-development law; it authorizes no implementation, decides no lifecycle/persistence/API/economic/scoring-law question, and blesses no shipped code — conforming changes remain separately authorized.**

@@ -1,7 +1,7 @@
 # AFI Canonical Evidence Persistence — Implementation Authorization v0.1 (MONGO-IMPL)
 
 **Slot:** `AFI-GOV-PERSISTENCE-IMPL-v0.1` (MONGO-IMPL)
-**Status:** **Proposed** for owner approval. This is a **staged implementation-authorization** decision. **Merging it contains and merges no implementation code**; on owner merge it opens the gate for **Slot 1 only**, and establishes the owner-merge **gate chain** for the remaining wave-1 slots. It becomes authoritative **only** when the owner merges it. Until merged, it authorizes nothing.
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #19 on 2026-07-14 (merge commit `2166823`); acceptance recorded under ARN-GOV D-ARN-4. This is a **staged implementation-authorization** decision. **Merging it contains and merges no implementation code**; on owner merge it opens the gate for **Slot 1 only**, and establishes the owner-merge **gate chain** for the remaining wave-1 slots. It became authoritative on that owner merge.
 **Date:** 2026-07-14
 **Type:** Staged implementation-authorization decision (persistence). Docs/governance-ledger only.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md`, its `AFI_DROID_PIPEHEAD_ADDENDUM.v0.1.md`, and `decisions/authority-districts-v0.1.md`. **Implements the merged `decisions/persistence-v0.1.md` (MONGO-GOV);** it does **not** re-decide it. Consumes `decisions/object-identity-v0.1.md` (OBJ-GOV) and `decisions/lifecycle-v0.1.md` (LIFE-GOV) **exactly**. Uses the staged **RC-12** authorization pattern of `decisions/uwr-runtime-consumption-v0.1.md`. Where this decision conflicts with the Charter, the Charter wins.
@@ -116,4 +116,4 @@ This decision does **not** authorize:
 
 ---
 
-**Proposed for owner approval. Authoritative only upon owner merge. On merge it authorizes only Slot 1 (`MONGO-CONTRACT`) to proceed and establishes the owner-merge gate chain for Slots 2–4; it authorizes no migration (Slot 5), no ATLAS/CHAIN work, and no code by its own merge — each slot lands only in its own gated, owner-merged PR.**
+**Accepted owner decision — accepted by merge of afi-governance PR #19 on 2026-07-14 (merge commit `2166823`); acceptance recorded under ARN-GOV D-ARN-4. On merge it authorizes only Slot 1 (`MONGO-CONTRACT`) to proceed and establishes the owner-merge gate chain for Slots 2–4; it authorizes no migration (Slot 5), no ATLAS/CHAIN work, and no code by its own merge — each slot lands only in its own gated, owner-merged PR.**
