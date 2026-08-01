@@ -1,7 +1,7 @@
 # AFI City Retirement v0.1 (CITY-RET-GOV)
 
 **Slot:** `AFI-GOV-CITY-RETIREMENT-v0.1` (CITY-RET-GOV)
-**Status:** **Proposed** for owner approval — this decision becomes authoritative only when the owner merges it. Owner authorization is recorded by the owner instruction that commissioned this decision (founder instruction of 2026-07-29: full retirement and deletion of the AFI City public ecosystem map and its repository, explicitly including the inherited GITC/USDC payment layer).
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #31 on 2026-07-30 (merge commit `6ea2708`, merged unedited). Owner authorization was recorded by the owner instruction that commissioned this decision (founder instruction of 2026-07-29: full retirement and deletion of the AFI City public ecosystem map and its repository, explicitly including the inherited GITC/USDC payment layer).
 **Date:** 2026-07-29
 **Type:** Scoped protocol-development governance decision (retirement record / de-ratification of a reference document / repository-existence fact). Documentation and governance-ledger only; it authorizes **no** schema, route, runtime, deployment, infrastructure, credential, or economic act, and decides nothing beyond its five clauses.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` and `decisions/authority-districts-v0.1.md`. For the District-framing, non-production, and no-financial-truth invariants it defers to `decisions/current-authority-reroot-and-golden-closure-v0.1.md` (R1-GOV). **Consumes (does not re-decide)** all twenty prior accepted decisions. **Supersedes** the D-CONST-2 ratification of the AFI City Ontology Specification v1.0 **only as stated in D-CITY-2 and nowhere else**. **Honors, and does not touch,** the reserved `ATLAS-GOV` (API/endpoint surface) and `CHAIN-GOV` (rewards / mint / settlement / on-chain / economic activation) scopes. Where this decision conflicts with the Charter, the Charter wins; where it conflicts with any accepted decision, that decision wins except on the single point D-CITY-2 expressly supersedes.
@@ -89,4 +89,4 @@ Walked against every prior accepted decision:
 
 ---
 
-**Status footer:** **Proposed** for owner approval. Acceptance is the owner's merge of this pull request.
+**Status footer:** **Accepted** owner decision — accepted by merge of afi-governance PR #31 on 2026-07-30 (merge commit `6ea2708`, merged unedited).
