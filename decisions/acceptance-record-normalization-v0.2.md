@@ -1,7 +1,7 @@
 # AFI Acceptance-Record Normalization v0.2 (ARN-GOV)
 
 **Slot:** `AFI-GOV-ACCEPTANCE-RECORD-NORMALIZATION-v0.2` (ARN-GOV)
-**Status:** **Proposed** for owner approval — this decision becomes authoritative only when the owner merges it. Owner authorization is recorded by the owner instruction that commissioned this decision (founder instruction of 2026-08-01: "Option B" — author a normalization decision recording the acceptance facts of the five early-era decisions whose Status text still reads Proposed, then flip their labels on its acceptance).
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #33 on 2026-08-01 (merge commit `87b393d`, merged unedited). Owner authorization was recorded by the owner instruction that commissioned this decision (founder instruction of 2026-08-01: "Option B" — author a normalization decision recording the acceptance facts of the five early-era decisions whose Status text still reads Proposed, then flip their labels on its acceptance).
 **Date:** 2026-08-01
 **Type:** Scoped protocol-development governance decision (acceptance-record normalization — governance-ledger and status-label text only). It re-decides **no clause** of any instrument, authorizes **no** code, schema, contract, persistence, scoring, deployment, or economic act, and decides nothing beyond its six clauses. Versioned **v0.2** because the first acceptance-record normalization act is DSC-GOV **D-DSC-8** (embedded in `district-surface-consolidation-v0.1.md`, not a standalone instrument); this is the second batch, following that pattern.
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` and `decisions/authority-districts-v0.1.md`. For the District-framing, non-production, and no-financial-truth invariants it defers to `decisions/current-authority-reroot-and-golden-closure-v0.1.md` (R1-GOV). **Consumes (does not re-decide)** all twenty-two prior decisions on the ledger. **Supersedes nothing** and fills no fence. **Honors, and does not touch,** the reserved `ATLAS-GOV` and `CHAIN-GOV` scopes. Where this decision conflicts with the Charter, the Charter wins; where it conflicts with any accepted decision, that decision wins.
@@ -95,4 +95,4 @@ Walked against every prior decision (twenty-two files). This decision supersedes
 
 ---
 
-**Status footer:** **Proposed** for owner approval. Acceptance is the owner's merge of this pull request; that merge constitutes the acceptance-fact rulings D-ARN-1 … D-ARN-5 and authorizes the D-ARN-6 flips.
+**Status footer:** **Accepted** owner decision — accepted by merge of afi-governance PR #33 on 2026-08-01 (merge commit `87b393d`, merged unedited). That merge constituted the acceptance-fact rulings D-ARN-1 … D-ARN-5 and authorized the D-ARN-6 flips.
