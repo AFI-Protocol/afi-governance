@@ -1,7 +1,7 @@
 # AFI Strategy-Version Semantics under Axis Evolution v0.1 (SV-GOV)
 
 **Slot:** `AFI-GOV-STRATEGY-VERSION-SEMANTICS-v0.1` (SV-GOV)
-**Status:** **Proposed** for owner approval — this decision becomes authoritative only when the owner merges it. Owner authorization is recorded by the owner instruction that commissioned this decision (founder instruction of 2026-08-01: "no bump — draft it", ruling that axis-semantics changes do not bump `strategyVersion`).
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #34 on 2026-08-02 (merge commit `62d0b8b`, merged unedited). The owner's merge constituted the D-SV-1 ruling and the D-SV-2 discipline. Owner authorization was recorded by the owner instruction that commissioned this decision (founder instruction of 2026-08-01: "no bump — draft it", ruling that axis-semantics changes do not bump `strategyVersion`).
 **Date:** 2026-08-01
 **Type:** Scoped protocol-development governance decision (versioning-semantics ruling — governance-ledger only). It authorizes **no** implementation, edits **no** file in any repository, changes **no** scoring value, schema, registry record, golden, weight, or profile, and decides nothing beyond its two clauses. It resolves the change-control ambiguity that the 2026-08-01 forensic investigation identified as "the difference between a half-day change and a cross-repo mission."
 **Governance:** Subordinate to `AFI_DROID_CHARTER.v0.1.md` and `decisions/authority-districts-v0.1.md`. For the District-framing, non-production, and no-financial-truth invariants it defers to `decisions/current-authority-reroot-and-golden-closure-v0.1.md` (R1-GOV). **Consumes (does not re-decide)** all twenty-three prior decisions on the ledger. **Supersedes nothing** — it records the authoritative reading of two afi-config change-control texts as a governance-ledger fact; neither text is edited. **Honors, and does not touch,** the reserved `ATLAS-GOV` and `CHAIN-GOV` scopes. Where this decision conflicts with the Charter, the Charter wins; where it conflicts with any accepted decision, that decision wins.
@@ -67,4 +67,4 @@ Walked against every prior decision (twenty-three files). This decision supersed
 
 ---
 
-**Status footer:** **Proposed** for owner approval. Acceptance is the owner's merge of this pull request; that merge constitutes the D-SV-1 ruling and the D-SV-2 discipline.
+**Status footer:** **Accepted** owner decision — accepted by merge of afi-governance PR #34 on 2026-08-02 (merge commit `62d0b8b`, merged unedited). That merge constituted the D-SV-1 ruling and the D-SV-2 discipline.
