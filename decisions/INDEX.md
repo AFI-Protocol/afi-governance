@@ -5,7 +5,7 @@
 > This index does **not** rewrite accepted decisions; it only lists them.
 > Regeneration: `python3 scripts/generate-decisions-index.py`.
 
-**Count:** 31 decision files.
+**Count:** 32 decision files.
 
 | File | GOV | Status | Date | Bytes | Title |
 |---|---|---|---|---:|---|
@@ -16,6 +16,7 @@
 | `city-retirement-v0.1.md` | — | Accepted | 2026-07-29 | 12037 | AFI City Retirement v0.1 (CITY-RET-GOV) |
 | `constitutional-architecture-v1.0.md` | CONST-GOV | Accepted | 2026-07-25 | 28007 | AFI Constitutional Architecture v1.0 (CONST-GOV) |
 | `current-authority-reroot-and-golden-closure-v0.1.md` | R1-GOV | Accepted | 2026-07-19 | 41301 | AFI Current-Authority Re-Root & Deterministic-Golden Closure v0.1 (R1-GOV) |
+| `d5-scoring-silent-defaults-zero-movement-v0.1.md` | D5-GOV | Accepted | 2026-08-04 | 5229 | D5 Scoring Silent-Defaults — Zero-Movement Declaration v0.1 (D5-GOV) |
 | `decay-horizon-alignment-v0.1.md` | DH-GOV | Accepted | 2026-08-03 | 28216 | AFI Decay-Horizon Alignment v0.1 (DH-GOV) |
 | `decay-horizon-purge-v0.1.md` | DHP-GOV | Accepted | 2026-08-03 | 5682 | AFI Decay-Horizon Purge v0.1 (DHP-GOV) |
 | `district-2-m2-ratification-v0.1.md` | — | Accepted | 2026-07-14 | 27206 | AFI District 2 — Prospective Bounded Ratification of the Shipped "M2" D2-Native  |
@@ -26,7 +27,7 @@
 | `execution-quantisation-v0.1.md` | EQ-GOV | Accepted | 2026-08-02 | 38203 | AFI Execution-Axis Trigger Quantisation v0.1 (EQ-GOV) |
 | `factory-configurable-pipelines-v1.md` | FCP-GOV | Accepted | 2026-07-16 | 31195 | AFI Factory Analyst-Configurable Pipelines v1 (FCP-GOV) |
 | `five-lane-provider-runtime-v0.1.md` | FLPR-GOV | Accepted | 2026-07-18 | 23708 | AFI Five-Lane Provider Runtime Activation v0.1 (FLPR-GOV) |
-| `governance-process-rightsize-v0.1.md` | GPR-GOV | Proposed | 2026-08-04 | 10324 | Governance Process Right-Size v0.1 (GPR-GOV) |
+| `governance-process-rightsize-v0.1.md` | GPR-GOV | Accepted | 2026-08-04 | 10778 | Governance Process Right-Size v0.1 (GPR-GOV) |
 | `lifecycle-v0.1.md` | LIFE-GOV | Accepted | 2026-07-14 | 20500 | AFI Canonical Signal Lifecycle & Finality v0.1 (LIFE-GOV) |
 | `math-authority-v0.1.md` | — | Accepted | 2026-07-04 | 16731 | AFI Mathematical Authority Model v0.1 |
 | `mint-formula-bt-86b-alignment-v0.1.md` | — | Accepted | 2026-07-04 | 11885 | AFI Mint Formula and B(t)/86B Alignment v0.1 (PR-2) |
@@ -42,5 +43,4 @@
 | `uwr-runtime-consumption-v0.1.md` | — | Accepted | 2026-07-12 | 35209 | AFI Runtime UWR Registry Consumption v0.1 (Staged Authorization Framework, Testn |
 
 ## Status summary
-- **Accepted:** 30
-- **Proposed:** 1
+- **Accepted:** 32

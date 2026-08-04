@@ -2,7 +2,7 @@
 
 **Slot:** `AFI-GOV-GOVERNANCE-PROCESS-RIGHTSIZE-v0.1` (GPR-GOV)
 
-**Status:** **Proposed** — not accepted until owner merge of the afi-governance PR that carries this file. This filing does **not** self-accept and does **not** flip its own Status line.
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #41 on 2026-08-04 (merge commit `452b522`, merged unedited). That merge simultaneously constituted D-GPR-1 (touch-scoped supersessions walk + generated index), D-GPR-2 (Tier F / Tier S blast-radius tiers), D-GPR-3 (money-relevant record preserved), and D-GPR-4 (external relevance line). Owner authorization is recorded by the owner instruction that commissioned this decision (reduce compounding governance ceremony without weakening the settlement-relevant trail).
 
 **Date:** 2026-08-04
 
@@ -105,4 +105,4 @@
 
 ---
 
-**Status footer:** **Proposed** — awaiting owner merge. Acceptance constitutes D-GPR-1 (touch-scoped walk + index), D-GPR-2 (Tier F / Tier S), D-GPR-3 (money-relevant record preserved), and D-GPR-4 (relevance line).
+**Status footer:** **Accepted** owner decision — accepted by merge of afi-governance PR #41 on 2026-08-04 (merge commit `452b522`, merged unedited). That merge constituted D-GPR-1 (touch-scoped walk + index), D-GPR-2 (Tier F / Tier S), D-GPR-3 (money-relevant record preserved), and D-GPR-4 (relevance line).

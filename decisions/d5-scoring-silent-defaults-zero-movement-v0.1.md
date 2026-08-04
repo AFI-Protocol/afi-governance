@@ -2,7 +2,7 @@
 
 **Slot:** `AFI-GOV-D5-SCORING-SILENT-DEFAULTS-ZERO-MOVEMENT-v0.1` (D5-GOV)
 
-**Status:** **Proposed** — not accepted until owner merge of the afi-governance PR that carries this file. This filing does **not** self-accept and does **not** flip its own Status line. The linked afi-core / afi-reactor PRs implement this option **contingently**; implementation is not an argument for acceptance.
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #42 on 2026-08-04 (merge commit `c90f361`, merged unedited). Acceptance preceded the implementing merges, as the filing required: the contingent afi-core / afi-reactor PRs (afi-core #29, afi-reactor #79) were merged only after this decision was accepted, so implementation was never an argument for acceptance.
 
 **Date:** 2026-08-04
 
@@ -48,4 +48,4 @@ Verification bar for that act: full suites green; oracle golden sha256 list byte
 
 ---
 
-**Status footer:** **Proposed** — awaiting owner merge. Do not flip Status in this PR.
+**Status footer:** **Accepted** owner decision — accepted by merge of afi-governance PR #42 on 2026-08-04 (merge commit `c90f361`, merged unedited). Implementing merges landed after acceptance: afi-core #29 (`7faa2fd`) and afi-reactor #79 (`fd30147`), both verified zero-movement — provenance golden `312da118…` unchanged and no fixture byte moved.
