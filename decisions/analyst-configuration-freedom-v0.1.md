@@ -1,7 +1,7 @@
 # AFI Analyst Configuration Freedom v0.1 (CFG-GOV)
 
 **Slot:** `AFI-GOV-ANALYST-CONFIGURATION-FREEDOM-v0.1` (CFG-GOV)
-**Status:** **Proposed** for owner approval — this decision becomes authoritative only when the owner merges it. Owner authorization for its subject matter is recorded by the owner instruction that commissioned this decision (founder instruction of 2026-08-05: *"let's get this governance update or supersession over and done with so we can move forward with our new purpose. I fully approve removing these blockers and setting the new tone."*).
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #43 on 2026-08-06 (merge commit `414f2cc`, merged unedited). Owner authorization was recorded by the owner instruction that commissioned this decision (founder instruction of 2026-08-05: *"let's get this governance update or supersession over and done with so we can move forward with our new purpose. I fully approve removing these blockers and setting the new tone."*).
 **Date:** 2026-08-05
 **Type:** Scoped protocol-development governance decision (**Tier F** under GPR-GOV D-GPR-2 — it amends governed schemas and laws that scoring and evidence surfaces depend on). Records settled owner decisions across six clauses; it is **not** a constitution and decides nothing beyond them.
 **Relevance (GPR-GOV D-GPR-4):** *An analyst who is not a programmer can register a second strategy, choose which enrichment categories it uses, set its own UWR weights, and adjust them as market conditions change — while every scored record remains sealed and proves exactly which configuration produced it.* Today none of that is possible: exactly one strategy is registrable, its weights are pinned by a loader predicate, a subset of categories cannot produce a valid record, and no record is ever made immutable.
@@ -148,4 +148,4 @@ Each slot is **inert until the owner authorizes it**. Accepting this decision au
 
 ---
 
-**Status footer:** **Proposed** — becomes authoritative on owner merge. On acceptance, add a direct-to-main record-acceptance commit flipping only this Status line and this footer, per the established convention.
+**Status footer:** **Accepted** owner decision — accepted by merge of afi-governance PR #43 on 2026-08-06 (merge commit `414f2cc`, merged unedited). This is the 33rd accepted decision on the ledger.
