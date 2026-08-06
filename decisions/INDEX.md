@@ -5,11 +5,12 @@
 > This index does **not** rewrite accepted decisions; it only lists them.
 > Regeneration: `python3 scripts/generate-decisions-index.py`.
 
-**Count:** 32 decision files.
+**Count:** 33 decision files.
 
 | File | GOV | Status | Date | Bytes | Title |
 |---|---|---|---|---:|---|
 | `acceptance-record-normalization-v0.2.md` | ARN-GOV | Accepted | 2026-08-01 | 13168 | AFI Acceptance-Record Normalization v0.2 (ARN-GOV) |
+| `analyst-configuration-freedom-v0.1.md` | CFG-GOV | Proposed | 2026-08-05 | 25917 | AFI Analyst Configuration Freedom v0.1 (CFG-GOV) |
 | `atr-regime-v0.1.md` | AR-GOV | Accepted | 2026-08-02 | 36971 | AFI ATR-Regime Activation v0.1 (AR-GOV) |
 | `authority-districts-v0.1.md` | — | Accepted | 2026-07-14 | 21369 | AFI Protocol-Development Authority Topology & Canonical District Registry v0.1 |
 | `challenge-retirement-v0.1.md` | CHR-GOV | Accepted | 2026-08-04 | 40573 | Challenge Retirement v0.1 (CHR-GOV) |
@@ -44,3 +45,4 @@
 
 ## Status summary
 - **Accepted:** 32
+- **Proposed:** 1
