@@ -2,7 +2,7 @@
 
 **Slot:** `AFI-GOV-CFG-PROOF-SCHEMA-SCOPE-GUARD-READING-v0.1` (CPSR-GOV)
 
-**Status:** **Proposed** — awaiting owner merge (acceptance is the owner's merge; AD Part F forbids agent self-ratification).
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #44 on 2026-08-06 (merge commit `e04ba9d`, merged unedited).
 
 **Date:** 2026-08-06
 

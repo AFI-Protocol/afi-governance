@@ -13,7 +13,7 @@
 | `analyst-configuration-freedom-v0.1.md` | CFG-GOV | Accepted | 2026-08-05 | 25910 | AFI Analyst Configuration Freedom v0.1 (CFG-GOV) |
 | `atr-regime-v0.1.md` | AR-GOV | Accepted | 2026-08-02 | 36971 | AFI ATR-Regime Activation v0.1 (AR-GOV) |
 | `authority-districts-v0.1.md` | — | Accepted | 2026-07-14 | 21369 | AFI Protocol-Development Authority Topology & Canonical District Registry v0.1 |
-| `cfg-proof-schema-scope-guard-reading-v0.1.md` | CPSR-GOV | Proposed | 2026-08-06 | 3777 | CFG-GOV D-CFG-3 "Proof Schema" Scope-Guard Reading v0.1 (CPSR-GOV) |
+| `cfg-proof-schema-scope-guard-reading-v0.1.md` | CPSR-GOV | Accepted | 2026-08-06 | 3793 | CFG-GOV D-CFG-3 "Proof Schema" Scope-Guard Reading v0.1 (CPSR-GOV) |
 | `challenge-retirement-v0.1.md` | CHR-GOV | Accepted | 2026-08-04 | 40573 | Challenge Retirement v0.1 (CHR-GOV) |
 | `city-retirement-v0.1.md` | — | Accepted | 2026-07-29 | 12037 | AFI City Retirement v0.1 (CITY-RET-GOV) |
 | `constitutional-architecture-v1.0.md` | CONST-GOV | Accepted | 2026-07-25 | 28007 | AFI Constitutional Architecture v1.0 (CONST-GOV) |
@@ -45,5 +45,4 @@
 | `uwr-runtime-consumption-v0.1.md` | — | Accepted | 2026-07-12 | 35209 | AFI Runtime UWR Registry Consumption v0.1 (Staged Authorization Framework, Testn |
 
 ## Status summary
-- **Accepted:** 33
-- **Proposed:** 1
+- **Accepted:** 34
