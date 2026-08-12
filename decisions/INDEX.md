@@ -5,7 +5,7 @@
 > This index does **not** rewrite accepted decisions; it only lists them.
 > Regeneration: `python3 scripts/generate-decisions-index.py`.
 
-**Count:** 34 decision files.
+**Count:** 35 decision files.
 
 | File | GOV | Status | Date | Bytes | Title |
 |---|---|---|---|---:|---|
@@ -21,6 +21,7 @@
 | `d5-scoring-silent-defaults-zero-movement-v0.1.md` | D5-GOV | Accepted | 2026-08-04 | 5229 | D5 Scoring Silent-Defaults — Zero-Movement Declaration v0.1 (D5-GOV) |
 | `decay-horizon-alignment-v0.1.md` | DH-GOV | Accepted | 2026-08-03 | 28216 | AFI Decay-Horizon Alignment v0.1 (DH-GOV) |
 | `decay-horizon-purge-v0.1.md` | DHP-GOV | Accepted | 2026-08-03 | 5682 | AFI Decay-Horizon Purge v0.1 (DHP-GOV) |
+| `declarative-enrichment-mapping-v0.1.md` | DEM-GOV | Proposed | 2026-08-12 | 72660 | AFI Declarative Enrichment-to-Scoring Mapping v0.1 (DEM-GOV) |
 | `district-2-m2-ratification-v0.1.md` | — | Accepted | 2026-07-14 | 27206 | AFI District 2 — Prospective Bounded Ratification of the Shipped "M2" D2-Native  |
 | `district-api-atlas-foundation-v0.1.md` | ATLAS-GOV | Accepted | 2026-07-19 | 35260 | AFI District / API Atlas Foundation v0.1 (ATLAS-GOV) |
 | `district-one-signal-evaluation-capability-v0.1.md` | D1CAP-GOV | Accepted | 2026-07-18 | 22968 | AFI District One — Current Signal Evaluation Capability v0.1 (D1CAP-GOV) |
@@ -46,3 +47,4 @@
 
 ## Status summary
 - **Accepted:** 34
+- **Proposed:** 1
