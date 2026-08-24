@@ -2,7 +2,7 @@
 
 **Slot:** `AFI-GOV-DEM-HASHING-KAT-ANCHOR-AMENDMENT-v0.1` (DKA-GOV)
 
-**Status:** **Proposed** for owner approval — this touch-scoped amendment becomes authoritative only when the owner merges it. Drafting is within the DEM-BIND slot authorization (founder instruction of 2026-08-22, *"Authorized."*); **acceptance is expressly NOT** — DEM-GOV §8 (:177) withholds any hashing-KAT change from every implementation slot, so lifting it in a bounded respect requires this owner-merged act (GPR-GOV D-GPR-3(2): stop and upgrade, never read around express text).
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #47 on 2026-08-23 (merge commit `e8afda0`, merged unedited). Drafting was within the DEM-BIND slot authorization (founder instruction of 2026-08-22, *"Authorized."*); acceptance is this owner-merged act, exactly as the Proposed text required (GPR-GOV D-GPR-3(2): stop and upgrade, never read around express text). DEM-BIND step (e1) now proceeds under its own slot authorization.
 
 **Date:** 2026-08-23
 
@@ -34,4 +34,4 @@ DEM-BIND's final bounded step (D-DEM-2(5)(e)) declares `mappingRef` required, wh
 
 ---
 
-**Status footer:** **Proposed** — becomes authoritative on owner merge; the owner's merge is the acceptance act. On acceptance, record it with the standing acceptance-record convention and regenerate `decisions/INDEX.md`. This amendment authorizes **zero** code PRs by itself; DEM-BIND step (e1) proceeds under its own slot authorization once this is accepted.
+**Status footer:** **Accepted** — authoritative on owner merge of PR #47 (merge commit `e8afda0`, 2026-08-23), the **36th** accepted decision on the ledger. This amendment authorizes **zero** code PRs by itself; DEM-BIND step (e1) proceeds under its own slot authorization.
