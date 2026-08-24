@@ -2,7 +2,7 @@
 
 **Slot:** `AFI-GOV-DLC-DECAY-KAT-STATUS-AMENDMENT-v0.1` (DKS-GOV)
 
-**Status:** **Proposed** for owner approval — this touch-scoped amendment becomes authoritative only when the owner merges it. Drafting is within the DLC-APPLY slot authorization (founder instructions of 2026-08-24, recorded in DLC-GOV's Status line); **acceptance is expressly NOT** — DLC-GOV §5 withholds "any uwr-profile v0 schema or registered-profile edit" from every slot, so lifting it in one bounded respect requires this owner-merged act (GPR-GOV D-GPR-3(2): stop and upgrade, never read around express text).
+**Status:** **Accepted** owner decision — accepted by merge of afi-governance PR #51 on 2026-08-24 (merge commit `defe527`, merged unedited, inclusive of the pre-merge adversarial-review amendment `b89a4b9`). Drafting was within the DLC-APPLY slot authorization; acceptance is this owner-merged act, exactly as the Proposed text required (GPR-GOV D-GPR-3(2)). The per-repo lockstep flip PRs D-DKS-1 authorizes proceed under the DLC-APPLY slot.
 
 **Date:** 2026-08-24
 
@@ -36,4 +36,4 @@ DLC-GOV's `DLC-APPLY` gate orders, inside the slot, that the governed decay KAT'
 
 ---
 
-**Status footer:** **Proposed** — becomes authoritative on owner merge; the owner's merge is the acceptance act. On acceptance, record it with the standing ARN-GOV acceptance-record convention and regenerate `decisions/INDEX.md` (**38th** accepted decision — verify at flip time). This amendment authorizes exactly the per-repo lockstep flip PRs described in D-DKS-1 (one afi-config, one afi-core), which complete the DLC-APPLY gate; it authorizes nothing else.
+**Status footer:** **Accepted** — authoritative on owner merge of PR #51 (merge commit `defe527`, 2026-08-24), the **38th** accepted decision on the ledger. This amendment authorizes exactly the per-repo lockstep flip PRs described in D-DKS-1 (one afi-config, one afi-core), which complete the DLC-APPLY gate; it authorizes nothing else.

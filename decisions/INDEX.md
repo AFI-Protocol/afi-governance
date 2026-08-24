@@ -28,7 +28,7 @@
 | `district-api-atlas-foundation-v0.1.md` | ATLAS-GOV | Accepted | 2026-07-19 | 35260 | AFI District / API Atlas Foundation v0.1 (ATLAS-GOV) |
 | `district-one-signal-evaluation-capability-v0.1.md` | D1CAP-GOV | Accepted | 2026-07-18 | 22968 | AFI District One — Current Signal Evaluation Capability v0.1 (D1CAP-GOV) |
 | `district-surface-consolidation-v0.1.md` | DSC-GOV | Accepted | 2026-07-18 | 32487 | AFI Clean-Cut District Surface Consolidation v0.1 (DSC-GOV) |
-| `dlc-decay-kat-status-amendment-v0.1.md` | DKS-GOV | Proposed | 2026-08-24 | 4997 | DLC-GOV Decay-KAT Status-Marker Amendment v0.1 (DKS-GOV) |
+| `dlc-decay-kat-status-amendment-v0.1.md` | DKS-GOV | Accepted | 2026-08-24 | 5286 | DLC-GOV Decay-KAT Status-Marker Amendment v0.1 (DKS-GOV) |
 | `evidence-v3-provider-provenance-v0.1.md` | EV3-GOV | Accepted | 2026-07-19 | 46072 | AFI Evidence V3 and Provider Invocation Provenance v0.1 (EV3-GOV) |
 | `execution-quantisation-v0.1.md` | EQ-GOV | Accepted | 2026-08-02 | 38203 | AFI Execution-Axis Trigger Quantisation v0.1 (EQ-GOV) |
 | `factory-configurable-pipelines-v1.md` | FCP-GOV | Accepted | 2026-07-16 | 31195 | AFI Factory Analyst-Configurable Pipelines v1 (FCP-GOV) |
@@ -49,5 +49,4 @@
 | `uwr-runtime-consumption-v0.1.md` | — | Accepted | 2026-07-12 | 35209 | AFI Runtime UWR Registry Consumption v0.1 (Staged Authorization Framework, Testn |
 
 ## Status summary
-- **Accepted:** 37
-- **Proposed:** 1
+- **Accepted:** 38
