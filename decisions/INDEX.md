@@ -5,7 +5,7 @@
 > This index does **not** rewrite accepted decisions; it only lists them.
 > Regeneration: `python3 scripts/generate-decisions-index.py`.
 
-**Count:** 36 decision files.
+**Count:** 37 decision files.
 
 | File | GOV | Status | Date | Bytes | Title |
 |---|---|---|---|---:|---|
@@ -21,6 +21,7 @@
 | `d5-scoring-silent-defaults-zero-movement-v0.1.md` | D5-GOV | Accepted | 2026-08-04 | 5229 | D5 Scoring Silent-Defaults — Zero-Movement Declaration v0.1 (D5-GOV) |
 | `decay-horizon-alignment-v0.1.md` | DH-GOV | Accepted | 2026-08-03 | 28216 | AFI Decay-Horizon Alignment v0.1 (DH-GOV) |
 | `decay-horizon-purge-v0.1.md` | DHP-GOV | Accepted | 2026-08-03 | 5682 | AFI Decay-Horizon Purge v0.1 (DHP-GOV) |
+| `decay-lifecycle-v0.1.md` | DLC-GOV | Proposed | 2026-08-24 | 25674 | AFI Decay Lifecycle v0.1 (DLC-GOV) |
 | `declarative-enrichment-mapping-v0.1.md` | DEM-GOV | Accepted | 2026-08-12 | 73539 | AFI Declarative Enrichment-to-Scoring Mapping v0.1 (DEM-GOV) |
 | `dem-hashing-kat-anchor-amendment-v0.1.md` | DKA-GOV | Accepted | 2026-08-23 | 4411 | DEM-GOV Hashing-KAT Example-Anchor Amendment v0.1 (DKA-GOV) |
 | `district-2-m2-ratification-v0.1.md` | — | Accepted | 2026-07-14 | 27206 | AFI District 2 — Prospective Bounded Ratification of the Shipped "M2" D2-Native  |
@@ -48,3 +49,4 @@
 
 ## Status summary
 - **Accepted:** 36
+- **Proposed:** 1
