@@ -10,7 +10,7 @@
 | File | GOV | Status | Date | Bytes | Title |
 |---|---|---|---|---:|---|
 | `acceptance-record-normalization-v0.2.md` | ARN-GOV | Accepted | 2026-08-01 | 13168 | AFI Acceptance-Record Normalization v0.2 (ARN-GOV) |
-| `analyst-calibration-record-v0.1.md` | CAL-GOV | Proposed | 2026-08-24 | 51618 | AFI Analyst Calibration Record v0.1 (CAL-GOV) |
+| `analyst-calibration-record-v0.1.md` | CAL-GOV | Accepted | 2026-08-24 | 51531 | AFI Analyst Calibration Record v0.1 (CAL-GOV) |
 | `analyst-configuration-freedom-v0.1.md` | CFG-GOV | Accepted | 2026-08-05 | 25910 | AFI Analyst Configuration Freedom v0.1 (CFG-GOV) |
 | `atr-regime-v0.1.md` | AR-GOV | Accepted | 2026-08-02 | 36971 | AFI ATR-Regime Activation v0.1 (AR-GOV) |
 | `authority-districts-v0.1.md` | — | Accepted | 2026-07-14 | 21369 | AFI Protocol-Development Authority Topology & Canonical District Registry v0.1 |
@@ -50,5 +50,4 @@
 | `uwr-runtime-consumption-v0.1.md` | — | Accepted | 2026-07-12 | 35209 | AFI Runtime UWR Registry Consumption v0.1 (Staged Authorization Framework, Testn |
 
 ## Status summary
-- **Accepted:** 38
-- **Proposed:** 1
+- **Accepted:** 39
